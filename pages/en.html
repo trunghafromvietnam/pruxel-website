@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruxel — Human-Centered Technical Products</title>
+    <meta name="description" content="Pruxel builds human-centered AI products that solve real problems and elevate everyday life. Discover our technology and products.">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Favicon & Manifest -->
+    <link rel="icon" href="../img/favicon.ico" sizes="any">
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Pruxel",
+      "url": "https://pruxel.tech",
+      "logo": "https://pruxel.tech/pruxel.tech/img/Pruxel_Logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "official@pruxel.tech"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ======================= HEADER ======================= -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <img src="../img/Pruxel_Logo.png" alt="Pruxel Logo" class="logo-mark">
+                <span class="logo-text">Pruxel</span>
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#home">Overall</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#why-pruxel">Technology</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="vi.html" class="lang-toggle" aria-label="Chuyển sang tiếng Việt">VI</a>
+                <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Mở menu" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- ======================= MOBILE NAV DRAWER ======================= -->
+    <div class="mobile-nav" id="mobile-nav-drawer" role="dialog" aria-modal="true">
+        <button class="mobile-nav-close" id="mobile-nav-close-btn" aria-label="Đóng menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Overall</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#why-pruxel">Technology</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" hidden></div>
+
+    <main>
+        <!-- ======================= HERO SECTION ======================= -->
+        <section id="home" class="hero section">
+            <div class="container">
+                <h1>Pruxel builds human-centered AI products that solve real problems and elevate everyday life.</h1>
+                <p>We believe in the power of technology when designed to responsibly serve and amplify human potential.</p>
+                <div class="hero-actions">
+                    <a href="#why-pruxel" class="btn btn-primary">Learn More</a>
+                    <a href="#contact" class="btn btn-secondary">Contact</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ======================= PRODUCTS SECTION ======================= -->
+        <section id="products" class="section" style="background-color: #F8F8F8;">
+            <div class="container">
+                <h2 class="section-title">Our Notable Products</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-card-header"><div class="product-logo"><img src="../img/usportline_logo.png" alt="USPortLine Logo" class="product-logo"></div><h3>USPortLine</h3></div>
+                        <div class="product-card-body"><p>AI-powered US visa interview practice with realistic feedback and improvement reports. Join and connect with experienced immigrating community.</p></div>
+                        <div class="product-card-footer"><a href="https://usportline.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Explore &rarr;</a></div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card-header"><div class="product-logo"><img src="../img/doneline_logo.png" alt="DoneLine Logo" class="product-logo"></div><h3>DoneLine</h3></div>
+                        <div class="product-card-body"><p>A workspace for personal growth with AI-driven roadmaps and productivity reports.</p></div>
+                        <div class="product-card-footer"><a href="https://doneline.org" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Explore &rarr;</a></div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card-header"><div class="product-logo"><img src="../img/Vericheep_Official_Logo.png" alt="Vericheep Logo" class="product-logo"></div><h3>Vericheep</h3><span class="coming-soon">Coming soon</span></div>
+                        <div class="product-card-body"><p>Pre-tape-out logic verification, simplifying EDA/verification for all R&D teams, start-up, individuals.</p></div>
+                        <div class="product-card-footer"><span class="btn btn-secondary" style="opacity: 0.5; cursor: not-allowed;">Coming Sep 2025</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= WHY PRUXEL (PILLARS) SECTION ======================= -->
+        <section id="why-pruxel" class="section">
+            <div class="container">
+                <h2 class="section-title">Technology & Philosophy</h2>
+                <div class="pillars-grid">
+                    <div class="pillar-item">
+                        <div class="icon">🚀</div><h3>Impact</h3><p>We measure results by our users' progress in learning, productivity, and opportunities. We always try to be creative to promote the development of technology.</p>
+                    </div>
+                    <div class="pillar-item">
+                        <div class="icon">🛡️</div><h3>Trust</h3><p>Built on secure architecture, data transparency, model evaluations, and observability.</p>
+                    </div>
+                    <div class="pillar-item">
+                        <div class="icon">🌍</div><h3>Accessibility</h3><p>Simplified experiences, multilingual support, tailored for Vietnam and the region.</p>
+                    </div>
+                    <div class="pillar-item">
+                        <div class="icon">💡</div><h3>Innovation</h3><p>Combining conversational AI, analytics, and logic verification (Vericheep) in core domains.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ======================= CONTACT SECTION ======================= -->
+        <section id="contact" class="section" style="background-color: #F8F8F8;">
+            <div class="container" style="text-align: center; max-width: 600px;">
+                <h2 class="section-title">Get in Touch</h2>
+                <p>We're always open to discussing partnership opportunities, support requests, or any questions you may have. Feel free to email or call us.</p>
+                <p><strong>Address:</strong> Phu Xuan, Phu Trach, Quang Tri, Viet Nam</p>
+                <a href="mailto:official@pruxel.tech" class="btn btn-primary">official@pruxel.tech</a>
+                <a href="tel:+84375690224" class="call-fab" aria-label="Gọi Pruxel">📞</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================= FOOTER ======================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="copyright">© 2025 Pruxel. All rights reserved.</div>
+                <div class="footer-legal"></div>
+                    Pruxel Technology Company Limited - Reg. No: 3101147420 <br>
+                    Address: Phu Xuan, Phu Trach, Quang Tri, Viet Nam
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

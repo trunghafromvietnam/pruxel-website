@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    /* 🌓 CSS bên trong SVG */
+    path {
+      fill: #001f3f; /* Màu mặc định (light mode) - Màu navy của bạn */
+    }
+    @media (prefers-color-scheme: dark) {
+      path {
+        fill: #ffffff; /* Màu cho dark mode - Trắng */
+      }
+    }
+  </style>
+
+  <path d="M50,5 L95,28 L95,72 L50,95 L5,72 L5,28 Z M50,25 L78,42 L50,58 L22,42 Z M25,50 L50,65 L75,50 L50,35 Z"/>
+  </svg>
