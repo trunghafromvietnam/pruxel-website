@@ -111,13 +111,20 @@ p { margin-bottom: 1rem; color: var(--text-secondary); }
 
 /* --- Hero --- */
 .hero {
-  padding-top: 70px;
-  height: 100vh;
+  padding-top: calc(70px + env(safe-area-inset-top));
+  min-height: calc(100svh - 70px);
   display: flex;
   align-items: center;
   text-align: center;
-  position: relative; /* Thêm position relative để lớp phủ hoạt động */
-  color: var(--white); /* Đổi màu chữ chính thành trắng để nổi bật */
+  position: relative;
+  color: var(--white);
+}
+
+/* Tăng khoảng trên cho mobile chữ dài */
+@media (max-width: 600px) {
+  .hero {
+    padding-top: calc(86px + env(safe-area-inset-top));
+  }
 }
 
 /* Lớp phủ (overlay) và ảnh nền */
