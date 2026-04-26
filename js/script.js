@@ -1,15 +1,20 @@
-// --- LUCIDE ICONS ---
-lucide.createIcons();
+// ============================================
+// PRUXEL.TECH — Production JS
+// ============================================
+
+// Safe lucide init
+if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+}
 
 // --- HEADER SCROLL EFFECT ---
 const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+if (header) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+    }, { passive: true });
+}
 
 // --- REVEAL ON SCROLL ---
 const observerOptions = { threshold: 0.1 };
@@ -25,23 +30,24 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // --- WAVE CANVAS ENGINE ---
 const canvas = document.getElementById('wave-canvas');
-const ctx = canvas.getContext('2d');
-let width, height;
-let time = 0;
+let ctx, width, height, time = 0;
 
-function resize() {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
+if (canvas) {
+    ctx = canvas.getContext('2d');
+    const resize = () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    };
+    window.addEventListener('resize', resize);
+    resize();
 }
-
-window.addEventListener('resize', resize);
-resize();
 
 let animId;
 let lastFrame = 0;
 const FPS_CAP = 30; // cap at 30fps — smooth but light
 
 function draw(timestamp) {
+    if (!ctx) return;
     animId = requestAnimationFrame(draw);
 
     // Throttle to 30fps
@@ -100,7 +106,7 @@ function draw(timestamp) {
     }
 }
 
-draw();
+if (canvas && ctx) draw();
 
 // --- VERTICAL WAVE (SOLUTIONS) ---
 const vCanvas = document.getElementById('vertical-wave-canvas');
@@ -207,13 +213,15 @@ document.querySelectorAll('.step-card, #metrics-trigger, .typewriter').forEach(e
 });
 
 
-// Hamburger logics
+// Hamburger logic with safeguard
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+}
 
   
 
@@ -353,7 +361,7 @@ function animateCounters(container) {
 })();
 
 // Re-init lucide for dynamically added icons
-lucide.createIcons();
+if (typeof lucide !== 'undefined') lucide.createIcons();
 
 // ===================================================
 // CONTACT FORM — connect /api/contact
@@ -426,4 +434,3 @@ lucide.createIcons();
         }
     });
 })();
-  

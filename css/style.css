@@ -1,3 +1,61 @@
+/* ===================================================
+   PRUXEL.TECH — Production CSS
+   Enterprise-grade design system
+=================================================== */
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* offset for fixed header */
+}
+
+/* Better focus visibility for accessibility (WCAG AA) */
+*:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Selection highlight */
+::selection {
+    background: rgba(59, 130, 246, 0.3);
+    color: #fff;
+}
+
+/* Better scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #020617;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(59, 130, 246, 0.3);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(59, 130, 246, 0.5);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Performance: use will-change wisely */
+.benefit-belt-inner,
+.marquee-content,
+.clock-hand,
+.chart-bar,
+.travel-dot {
+    will-change: transform;
+}
+
 :root {
     --bg: #020617;
     --primary: #3b82f6;
@@ -74,7 +132,7 @@ nav {
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
     transition: 0.3s;
 }
 
@@ -235,27 +293,16 @@ h1 {
     flex-direction: row;
 }
 
-/* --- LOGO AND COMPANY NAME */
-.logo {
-    display: flex; 
-    align-items: center; 
-    gap: 12px; 
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
+/* --- LOGO IMG --- */
 .logo-img {
-    height: 32px; 
+    height: 32px;
     width: auto;
     filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.4));
     transition: transform 0.3s var(--easing);
 }
 
 .logo:hover .logo-img {
-    transform: rotate(-5deg) scale(1.1); 
+    transform: rotate(-5deg) scale(1.1);
 }
 
 /* HAMBURGER */

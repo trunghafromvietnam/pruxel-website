@@ -59,8 +59,7 @@
         <!-- ═══ PERFORMANCE ════════════════════════════════════════════════════ -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-        <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
      
         <!-- ═══ ASSETS ════════════════════════════════════════════════════════ -->
         <link rel="stylesheet" href="css/style.css">
@@ -69,9 +68,9 @@
         <link rel="manifest" href="site.webmanifest">
         <meta name="theme-color" content="#0f172a">
      
-        <!-- ═══ SCRIPTS (deferred) ═══════════════════════════════════════════ -->
-        <script src="https://unpkg.com/lucide@latest" defer></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+    <!-- ═══ ICON LIBRARIES (load synchronously) ═══════════════════════ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
     </head>
 <body>
 
@@ -700,6 +699,6 @@
         <div class="footer-glow"></div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
