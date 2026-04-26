@@ -1,166 +1,585 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pruxel — Sản phẩm công nghệ hướng con người</title>
-    <meta name="description" content="Pruxel phát triển các sản phẩm AI hướng con người, giải bài toán thực tế và nâng tầm chất lượng sống. Khám phá công nghệ và các sản phẩm của chúng tôi.">
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Favicon & Manifest -->
-    <link rel="icon" href="/img/favicon.ico" sizes="any">
-    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-
-    <!-- JSON-LD Schema -->
+    <title>Pruxel | Scale Business With AI Systems</title>
+    <!-- SEO -->
+    <meta name="description" content="Pruxel builds production-grade AI systems — RAG assistants, CS automation, and custom ML pipelines that drive measurable ROI.">
+    <meta name="keywords" content="AI agency, AI automation, RAG, LLM, AI consulting">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://pruxel.com">
+    
+    <!-- Open Graph (LinkedIn, Facebook share) -->
+    <meta property="og:title" content="Pruxel | Scale Business With AI Systems">
+    <meta property="og:description" content="...">
+    <meta property="og:image" content="https://pruxel.com/img/og-image.png">
+    <meta property="og:url" content="https://pruxel.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pruxel | Scale Business With AI Systems">
+    
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Pruxel",
-      "url": "https://pruxel.tech",
-      "logo": "https://pruxel.tech/img/Pruxel_Logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Customer Support",
-        "email": "official@pruxel.tech"
-      }
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Pruxel",
+        "description": "AI Systems Agency",
+        "url": "https://pruxel.com",
+        "telephone": "+84375069224",
+        "email": "official@pruxel.com",
+        "serviceType": "AI Consulting & Development"
     }
     </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/pruxel_favicon.ico">
 </head>
 <body>
 
-    <!-- ======================= HEADER ======================= -->
-    <header class="site-header">
-        <div class="container header-container">
-            <a href="#home" class="logo">
-                <img src="/img/Pruxel_Logo.png" alt="Pruxel Logo" class="logo-mark">
-                <span class="logo-text">Pruxel</span>
-            </a>
-            <nav class="main-nav">
-                <ul class="nav-links">
-                    <li><a href="#home">Tổng quan</a></li>
-                    <li><a href="#products">Sản phẩm</a></li>
-                    <li><a href="#why-pruxel">Công nghệ</a></li>
-                    <li><a href="#contact">Liên hệ</a></li>
-                </ul>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="img/Pruxel_Tech_Logo.png" alt="Pruxel Logo" class="logo-img">
+                    PRUXEL<span>.</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#solutions">Solutions</a>
+                    <a href="#process">Process</a>
+                    <a href="#why-us">Why Us</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <a href="#contact" class="btn btn-primary btn-header">Get Started</a>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
-            <div class="header-actions">
-                <a href="en.html" class="lang-toggle" aria-label="Switch to English">EN</a>
-                <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Mở menu" aria-expanded="false">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                </button>
-            </div>
         </div>
     </header>
-    
-    <!-- ======================= MOBILE NAV DRAWER ======================= -->
-    <div class="mobile-nav" id="mobile-nav-drawer" role="dialog" aria-modal="true">
-        <button class="mobile-nav-close" id="mobile-nav-close-btn" aria-label="Đóng menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Tổng quan</a></li>
-                <li><a href="#products">Sản phẩm</a></li>
-                <li><a href="#why-pruxel">Công nghệ</a></li>
-                <li><a href="#contact">Liên hệ</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" hidden></div>
 
-    <main>
-        <!-- ======================= HERO SECTION ======================= -->
-        <section id="home" class="hero section">
-            <div class="container">
-                <h1>Pruxel phát triển các sản phẩm công nghệ có tích hợp AI hướng con người, giải bài toán thực tế, thúc đẩy sự sáng tạo và nâng tầm chất lượng sống.</h1>
-                <p>Chúng tôi tin vào sức mạnh của công nghệ khi được thiết kế để phục vụ và nâng cao tiềm năng con người một cách có trách nhiệm.</p>
-                <div class="hero-actions">
-                    <a href="#why-pruxel" class="btn btn-primary">Tìm hiểu thêm</a>
-                    <a href="#contact" class="btn btn-secondary">Liên hệ</a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- ======================= PRODUCTS SECTION ======================= -->
-        <section id="products" class="section" style="background-color: #F8F8F8;">
-            <div class="container">
-                <h2 class="section-title">Sản phẩm tiêu biểu của chúng tôi</h2>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="product-card-header"><div class="product-logo"><img src="/img/usportline_logo.png" alt="USPortLine Logo" class="product-logo"></div><h3>USPortLine</h3></div>
-                        <div class="product-card-body"><p>Luyện phỏng vấn visa Mỹ bằng AI, phản hồi sát thực tế, báo cáo cải thiện. Gia nhập và kết nối với cộng đồng di trú có kinh nghiệm.</p></div>
-                        <div class="product-card-footer"><a href="https://usportline.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Khám phá &rarr;</a></div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-card-header"><div class="product-logo"><img src="/img/doneline_logo.png" alt="DoneLine Logo" class="product-logo"></div><h3>DoneLine</h3></div>
-                        <div class="product-card-body"><p>Không gian làm việc & phát triển bản thân, lộ trình AI, báo cáo năng suất với hệ thống Roadmap hỗ trợ nhanh và hiện đại.</p></div>
-                        <div class="product-card-footer"><a href="https://doneline.org" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Khám phá &rarr;</a></div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-card-header"><div class="product-logo"><img src="/img/Vericheep_Official_Logo.png" alt="Vericheep Logo" class="product-logo"></div><h3>Vericheep</h3><span class="coming-soon">Sắp ra mắt</span></div>
-                        <div class="product-card-body"><p>Xác minh logic chip trước tape-out, đơn giản hoá EDA/verification cho mọi nhóm R&D, start-up, cá nhân.</p></div>
-                        <div class="product-card-footer"><span class="btn btn-secondary" style="opacity: 0.5; cursor: not-allowed;">Dự kiến 09/2025</span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======================= WHY PRUXEL (PILLARS) SECTION ======================= -->
-        <section id="why-pruxel" class="section">
-            <div class="container">
-                <h2 class="section-title">Công nghệ & Triết lý</h2>
-                <div class="pillars-grid">
-                    <div class="pillar-item">
-                        <div class="icon">🚀</div><h3>Tác động thực</h3><p>Chúng tôi đo lường kết quả bằng sự tiến bộ của người dùng (học tập, năng suất, cơ hội). Chúng tôi luôn cố gắng sáng tạo để thúc đẩy sự phát triển công nghệ.</p>
-                    </div>
-                    <div class="pillar-item">
-                        <div class="icon">🛡️</div><h3>Tin cậy</h3><p>Kiến trúc bảo mật, minh bạch dữ liệu, đánh giá mô hình (evals) và giám sát (observability).</p>
-                    </div>
-                    <div class="pillar-item">
-                        <div class="icon">🌍</div><h3>Dễ tiếp cận</h3><p>Trải nghiệm giản lược, đa ngôn ngữ, phù hợp điều kiện tại Việt Nam & khu vực, với mọi đối tượng.</p>
-                    </div>
-                    <div class="pillar-item">
-                        <div class="icon">💡</div><h3>Đổi mới</h3><p>Kết hợp AI hội thoại, phân tích, và xác minh logic (Vericheep) trong các lĩnh vực cốt lõi.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- ======================= CONTACT SECTION ======================= -->
-        <section id="contact" class="section" style="background-color: #F8F8F8;">
-            <div class="container" style="text-align: center; max-width: 600px;">
-                <h2 class="section-title">Liên hệ</h2>
-                <p>Chúng tôi luôn sẵn sàng lắng nghe các cơ hội hợp tác, yêu cầu hỗ trợ hoặc bất kỳ câu hỏi nào từ bạn. Hãy gửi email hoặc gọi cho chúng tôi.</p>
-                <p><strong>Địa chỉ:</strong> Phú Xuân, Phú Trạch, Quảng Trị, Việt Nam</p>
-                <a href="mailto:official@pruxel.tech" class="btn btn-primary">official@pruxel.tech</a>
-                <a href="tel:+84375690224" class="call-fab" aria-label="Gọi Pruxel">📞</a>
-            </div>
-        </section>
-    </main>
-
-    <!-- ======================= FOOTER ======================= -->
-    <footer class="site-footer">
+    <section class="hero">
+        <canvas id="wave-canvas"></canvas>
+        <div class="hero-glow"></div>
         <div class="container">
-            <div class="footer-bottom">
-                <div class="copyright">© 2025 Pruxel. Mọi quyền được bảo lưu.</div>
-                <div class="footer-legal">
-                    Công ty TNHH Công Nghệ Pruxel - MST: 3101147420 <br>
-                    Địa chỉ: Phú Xuân, Phú Trạch, Quảng Trị, Việt Nam
+            <div class="hero-content">
+                <div class="badge-container">
+                    <span class="badge typewriter" data-text="AI Automation Partner"></span>
+                </div>
+                <h1>Scale Business <br>With AI Systems</h1>
+                <p class="hero-subtext">The question isn't "What is AI?" anymore. It's how much ROI is it driving for your operations? We engineer systems that deliver measurable results.</p>
+                <div class="hero-btns">
+                    <a href="#" class="btn btn-primary">Build My AI System <i data-lucide="arrow-right"></i></a>
+                    <a href="#" class="btn btn-outline">View Solutions</a>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="tech-stack">
+        <p class="tech-caption">
+            Built with production-grade AI infrastructure & modern ML stack
+        </p>
+        <div class="marquee">
+            <div class="marquee-content">
+                <div class="tech-item"><i data-lucide="terminal"></i> Python</div>
+                <div class="tech-item"><i data-lucide="brain"></i> LangChain</div>
+                <div class="tech-item"><i data-lucide="cpu"></i> PyTorch</div>
+                <div class="tech-item"><i data-lucide="layers"></i> OpenAI API</div>
+                <div class="tech-item"><i data-lucide="database"></i> Pinecone</div>
+                <div class="tech-item"><i data-lucide="code-2"></i> Next.js</div>
+                <div class="tech-item"><i data-lucide="component"></i> React</div>
+                <div class="tech-item"><i data-lucide="container"></i> Docker</div>
+                <div class="tech-item"><i data-lucide="terminal"></i> Python</div>
+                <div class="tech-item"><i data-lucide="brain"></i> LangChain</div>
+                <div class="tech-item"><i data-lucide="cpu"></i> PyTorch</div>
+                <div class="tech-item"><i data-lucide="layers"></i> OpenAI API</div>
+                <div class="tech-item"><i data-lucide="database"></i> Pinecone</div>
+                <div class="tech-item"><i data-lucide="code-2"></i> Next.js</div>
+                <div class="tech-item"><i data-lucide="component"></i> React</div>
+                <div class="tech-item"><i data-lucide="container"></i> Docker</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal" id="solutions">
+        <canvas id="vertical-wave-canvas"></canvas> 
+        <div class="hero-glow"></div>
+        <div class="container">
+            <div class="section-header">
+                <div class="badge-container center">
+                    <span class="badge typewriter special" data-text="Strategic Solutions"></span>
+                    <div class="scan-line"></div>
+                </div>
+                <h2>Strategic AI Solutions</h2>
+                <p>Production-grade systems designed to sit at the core of your business infrastructure.</p>
+            </div>
+
+            <div class="solutions-grid">
+                <div class="card">
+                    <i data-lucide="brain-circuit" size="32"></i>
+                    <h3>AI Knowledge Assistant</h3>
+                    <p>Turn PDFs, Drive, and Notion into a "Corporate Brain" with 100% private RAG technology.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="messages-square" size="32"></i>
+                    <h3>CS Automation</h3>
+                    <p>Omnichannel AI that understands intent, handling 80% of support workload automatically.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="zap" size="32"></i>
+                    <h3>Workflow Automation</h3>
+                    <p>AI Agents for invoice processing, email classification, and automated CV screening.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="layout-grid" size="32"></i>
+                    <h3>Custom AI Systems</h3>
+                    <p>Tailored models for defect detection, market prediction, or recommendation engines.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="rocket" size="32"></i>
+                    <h3>Startup MVP Sprint</h3>
+                    <p>Turn AI ideas into production-ready products with optimized cloud infrastructure.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="bar-chart-3" size="32"></i>
+                    <h3>AI Consulting</h3>
+                    <p>Strategic model deployment, data pipelines, and MLOps for sustainable scaling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="why-us">
+        <div class="container">
+            <div class="badge-container center">
+                <span class="badge typewriter special" data-text="Benefits"></span>
+                <div class="scan-line"></div>
+            </div>
+            <div class="section-header">
+                <h2>Why Choose Us</h2>
+                <p>Partner with an AI agency delivering smart solutions.</p>
+            </div>
+ 
+            <div class="benefit-card-container">
+ 
+                <!-- CARD 1: Real-Time Analytics - Animated Clock -->
+                <div class="benefit-card reveal">
+                    <div class="benefit-animation" id="anim-clock">
+                        <div class="clock-wrap">
+                            <div class="clock-face">
+                                <div class="clock-center"></div>
+                                <div class="clock-hand hour-hand" id="hour-hand"></div>
+                                <div class="clock-hand min-hand" id="min-hand"></div>
+                                <div class="clock-hand sec-hand" id="sec-hand"></div>
+                                <div class="clock-tick t12"></div>
+                                <div class="clock-tick t3"></div>
+                                <div class="clock-tick t6"></div>
+                                <div class="clock-tick t9"></div>
+                            </div>
+                            <div class="clock-pulse-ring"></div>
+                            <div class="clock-pulse-ring delay"></div>
+                        </div>
+                        <div class="anim-label-pill">
+                            <span class="live-dot"></span> LIVE
+                        </div>
+                    </div>
+                    <h3>Real-Time Analytics</h3>
+                    <p>Stay ahead with accurate, real-time performance tracking.</p>
+                </div>
+ 
+                <!-- CARD 2: AI-Driven Growth - Animated Bar Chart -->
+                <div class="benefit-card reveal">
+                    <div class="benefit-animation" id="anim-chart">
+                        <div class="chart-wrap">
+                            <div class="chart-tooltip" id="chart-tooltip">80% Automation</div>
+                            <div class="chart-bars">
+                                <div class="chart-bar" style="--h:45%; --delay:0s"></div>
+                                <div class="chart-bar" style="--h:65%; --delay:0.1s"></div>
+                                <div class="chart-bar" style="--h:55%; --delay:0.2s"></div>
+                                <div class="chart-bar active" style="--h:80%; --delay:0.3s"></div>
+                                <div class="chart-bar" style="--h:70%; --delay:0.4s"></div>
+                            </div>
+                            <div class="chart-baseline"></div>
+                        </div>
+                        <div class="chart-cost-pill">10% Cost</div>
+                    </div>
+                    <h3>AI-Driven Growth</h3>
+                    <p>Make smarter moves with accurate, real-time business insights.</p>
+                </div>
+ 
+                <!-- CARD 3: Sync in Real Time - Network nodes -->
+                <div class="benefit-card reveal">
+                    <div class="benefit-animation" id="anim-sync">
+                        <div class="sync-wrap">
+                            <svg class="sync-svg" viewBox="0 0 220 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line class="sync-line" x1="50" y1="80" x2="110" y2="80" stroke="rgba(59,130,246,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
+                                <line class="sync-line" x1="110" y1="80" x2="170" y2="40" stroke="rgba(59,130,246,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
+                                <line class="sync-line" x1="110" y1="80" x2="170" y2="120" stroke="rgba(59,130,246,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
+                                <circle class="sync-node main-node" cx="110" cy="80" r="14" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="1.5"/>
+                                <circle cx="110" cy="80" r="6" fill="#3b82f6"/>
+                                <circle class="sync-node" cx="50" cy="80" r="10" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="1.5"/>
+                                <circle cx="50" cy="80" r="4" fill="#94a3b8"/>
+                                <circle class="sync-node" cx="170" cy="40" r="10" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="1.5"/>
+                                <circle cx="170" cy="40" r="4" fill="#94a3b8"/>
+                                <circle class="sync-node" cx="170" cy="120" r="10" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="1.5"/>
+                                <circle cx="170" cy="120" r="4" fill="#94a3b8"/>
+                                <circle class="travel-dot" r="3" fill="#00f2ff">
+                                    <animateMotion dur="2s" repeatCount="indefinite" begin="0s">
+                                        <mpath href="#path1"/>
+                                    </animateMotion>
+                                </circle>
+                                <circle class="travel-dot" r="3" fill="#00f2ff">
+                                    <animateMotion dur="2.5s" repeatCount="indefinite" begin="0.5s">
+                                        <mpath href="#path2"/>
+                                    </animateMotion>
+                                </circle>
+                                <circle class="travel-dot" r="3" fill="#00f2ff">
+                                    <animateMotion dur="2s" repeatCount="indefinite" begin="1s">
+                                        <mpath href="#path3"/>
+                                    </animateMotion>
+                                </circle>
+                                <defs>
+                                    <path id="path1" d="M50,80 L110,80"/>
+                                    <path id="path2" d="M110,80 L170,40"/>
+                                    <path id="path3" d="M110,80 L170,120"/>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="sync-status-pill">
+                            <span class="sync-dot"></span> Synced
+                        </div>
+                    </div>
+                    <h3>Sync in Real Time</h3>
+                    <p>Connect with your team instantly to track progress and updates.</p>
+                </div>
+ 
+            </div>
+ 
+            <!-- Scrolling badge belt -->
+            <div class="benefit-belt-wrap">
+                <div class="benefit-belt">
+                    <div class="benefit-belt-inner">
+                        <span class="belt-tag"><i data-lucide="zap" class="belt-icon"></i> Real-Time Insights</span>
+                        <span class="belt-tag"><i data-lucide="settings-2" class="belt-icon"></i> Automation</span>
+                        <span class="belt-tag"><i data-lucide="git-branch" class="belt-icon"></i> Data-Driven Decisions</span>
+                        <span class="belt-tag"><i data-lucide="rocket" class="belt-icon"></i> Faster Innovation</span>
+                        <span class="belt-tag"><i data-lucide="bot" class="belt-icon"></i> Virtual Assistance</span>
+                        <span class="belt-tag"><i data-lucide="layers" class="belt-icon"></i> Scalable Systems</span>
+                        <span class="belt-tag"><i data-lucide="shield-check" class="belt-icon"></i> Enterprise Security</span>
+                        <span class="belt-tag"><i data-lucide="zap" class="belt-icon"></i> Real-Time Insights</span>
+                        <span class="belt-tag"><i data-lucide="settings-2" class="belt-icon"></i> Automation</span>
+                        <span class="belt-tag"><i data-lucide="git-branch" class="belt-icon"></i> Data-Driven Decisions</span>
+                        <span class="belt-tag"><i data-lucide="rocket" class="belt-icon"></i> Faster Innovation</span>
+                        <span class="belt-tag"><i data-lucide="bot" class="belt-icon"></i> Virtual Assistance</span>
+                        <span class="belt-tag"><i data-lucide="layers" class="belt-icon"></i> Scalable Systems</span>
+                        <span class="belt-tag"><i data-lucide="shield-check" class="belt-icon"></i> Enterprise Security</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="proof">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge-container center">
+                    <span class="badge typewriter special" data-text="Projects"></span>
+                    <div class="scan-line"></div>
+                </div>
+                <h2>Proven Impacts &amp; Results</h2>
+                <p>Explore Projects that reflect our AI expertise &amp; real world impact.</p>
+            </div>
+ 
+            <div class="projects-container">
+                <div class="projects-navigation">
+                    <button class="projects-navigation-btns active" data-tab="proj-1">PROJECT 1</button>
+                    <button class="projects-navigation-btns" data-tab="proj-2">PROJECT 2</button>
+                    <button class="projects-navigation-btns" data-tab="proj-3">PROJECT 3</button>
+                </div>
+ 
+                <!-- Project 1 -->
+                <div class="project-content active" id="proj-1-content">
+                    <div class="proj-img">
+                        <div class="proj-img-placeholder">
+                            <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                                <rect width="400" height="300" fill="#0f172a"/>
+                                <circle cx="200" cy="130" r="60" fill="none" stroke="rgba(59,130,246,0.3)" stroke-width="1.5"/>
+                                <circle cx="200" cy="130" r="40" fill="none" stroke="rgba(59,130,246,0.5)" stroke-width="1.5"/>
+                                <circle cx="200" cy="130" r="20" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="1.5"/>
+                                <line x1="120" y1="130" x2="180" y2="130" stroke="rgba(59,130,246,0.6)" stroke-width="1.5"/>
+                                <line x1="220" y1="130" x2="280" y2="130" stroke="rgba(59,130,246,0.6)" stroke-width="1.5"/>
+                                <line x1="200" y1="50" x2="200" y2="110" stroke="rgba(59,130,246,0.6)" stroke-width="1.5"/>
+                                <line x1="200" y1="150" x2="200" y2="210" stroke="rgba(59,130,246,0.6)" stroke-width="1.5"/>
+                                <text x="200" y="270" text-anchor="middle" fill="rgba(148,163,184,0.6)" font-size="12" font-family="Inter">MedixCare · Healthcare AI</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="proj-description">
+                        <span class="proj-index">01</span>
+                        <h4>MedixCare — AI Triage Assistant for Healthcare</h4>
+                        <p>We built a custom AI triage assistant that evaluates symptoms and routes patients to the appropriate care level.</p>
+                        <div class="proj-statistics">
+                            <div class="proj-statistics-item">
+                                <span class="stat-num" data-target="40">0</span><span class="stat-unit">%</span>
+                                <span class="stat-label">Reduced average wait</span>
+                            </div>
+                            <div class="proj-statistics-item">
+                                <span class="stat-num" data-target="30">0</span><span class="stat-unit">%</span>
+                                <span class="stat-label">Rise in patient satisfaction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Project 2 -->
+                <div class="project-content" id="proj-2-content">
+                    <div class="proj-img">
+                        <div class="proj-img-placeholder">
+                            <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                                <rect width="400" height="300" fill="#0f172a"/>
+                                <rect x="60" y="80" width="280" height="140" rx="8" fill="none" stroke="rgba(59,130,246,0.3)" stroke-width="1.5"/>
+                                <rect x="80" y="100" width="80" height="10" rx="3" fill="rgba(59,130,246,0.4)"/>
+                                <rect x="80" y="120" width="240" height="6" rx="3" fill="rgba(148,163,184,0.2)"/>
+                                <rect x="80" y="134" width="200" height="6" rx="3" fill="rgba(148,163,184,0.2)"/>
+                                <rect x="80" y="148" width="220" height="6" rx="3" fill="rgba(148,163,184,0.2)"/>
+                                <rect x="80" y="170" width="60" height="28" rx="6" fill="rgba(59,130,246,0.6)"/>
+                                <text x="200" y="260" text-anchor="middle" fill="rgba(148,163,184,0.6)" font-size="12" font-family="Inter">RetailBot · CS Automation</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="proj-description">
+                        <span class="proj-index">02</span>
+                        <h4>RetailBot — Omnichannel CS Automation</h4>
+                        <p>Deployed an intelligent CS agent across web, WhatsApp &amp; email that handles 80% of tickets autonomously.</p>
+                        <div class="proj-statistics">
+                            <div class="proj-statistics-item">
+                                <span class="stat-num" data-target="80">0</span><span class="stat-unit">%</span>
+                                <span class="stat-label">Tickets auto-resolved</span>
+                            </div>
+                            <div class="proj-statistics-item">
+                                <span class="stat-num" data-target="60">0</span><span class="stat-unit">%</span>
+                                <span class="stat-label">Reduction in support costs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Project 3 -->
+                <div class="project-content" id="proj-3-content">
+                    <div class="proj-img">
+                        <div class="proj-img-placeholder">
+                            <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                                <rect width="400" height="300" fill="#0f172a"/>
+                                <polyline points="60,220 120,180 180,140 240,100 300,80 340,60" stroke="rgba(59,130,246,0.7)" stroke-width="2" fill="none"/>
+                                <polygon points="60,220 120,180 180,140 240,100 300,80 340,60 340,220" fill="rgba(59,130,246,0.08)"/>
+                                <circle cx="120" cy="180" r="4" fill="#3b82f6"/>
+                                <circle cx="180" cy="140" r="4" fill="#3b82f6"/>
+                                <circle cx="240" cy="100" r="4" fill="#3b82f6"/>
+                                <circle cx="300" cy="80" r="6" fill="#00f2ff"/>
+                                <text x="200" y="260" text-anchor="middle" fill="rgba(148,163,184,0.6)" font-size="12" font-family="Inter">FinLens · Predictive Analytics</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="proj-description">
+                        <span class="proj-index">03</span>
+                        <h4>FinLens — Predictive Revenue Analytics</h4>
+                        <p>Built a custom ML pipeline for revenue forecasting integrating with ERP systems at 94% accuracy.</p>
+                        <div class="proj-statistics">
+                            <div class="proj-statistics-item">
+                                <span class="stat-num" data-target="94">0</span><span class="stat-unit">%</span>
+                                <span class="stat-label">Forecast accuracy</span>
+                            </div>
+                            <div class="proj-statistics-item">
+                                <span class="stat-num" data-target="3">0</span><span class="stat-unit">x</span>
+                                <span class="stat-label">Faster reporting cycle</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="process">
+        <div class="badge-container center">
+            <span class="badge typewriter special" data-text="Workflow"></span>
+            <div class="scan-line"></div>
+        </div>
+        <div class="container sticky-wrapper">
+            <div class="sticky-left">
+                <div class="hero-glow"></div>
+                <h2 class="giant-text">How It Works</h2> <p>From audit to deployment in weeks, not months.</p>
+            </div>
+            <div class="scroll-right">
+                <div class="step-card reveal-step" data-step="01">
+                    <span class="step-num">01</span>
+                    <h3>Diagnose</h3>
+                    <p>Deep audit of your workflows, data, and pain points to find ROI opportunities.</p>
+                </div>
+                <div class="step-card reveal-step" data-step="02">
+                    <span class="step-num">02</span>
+                    <h3>Design</h3>
+                    <p>Architecture and solution blueprint tailored to your specific tech stack.</p>
+                </div>
+                <div class="step-card reveal-step" data-step="03">
+                    <span class="step-num">03</span>
+                    <h3>Deploy</h3>
+                    <p>Production-grade build with rigorous testing and performance monitoring.</p>
+                </div>
+                <div class="step-card reveal-step" data-step="04">
+                    <span class="step-num">04</span>
+                    <h3>Scale</h3>
+                    <p>Continuous optimization, team training, and ROI tracking as you grow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact-section reveal" id="contact">
+        <div class="container contact-grid">
+      
+          <div class="cta-banner glass-card">
+            <div class="badge-container center">
+              <span class="badge typewriter special" data-text="Get in touch"></span>
+              <div class="scan-line"></div>
+            </div>
+      
+            <h2 class="cta-title">Ready to automate your future?</h2>
+      
+            <p class="cta-desc">
+              Tell us about your goals and challenges. Our team will assess your needs 
+              and recommend the right AI strategy.
+            </p>
+      
+            <div class="cta-glow"></div>
+          </div>
+      
+          <div class="cta-form glass-card">
+            <form id="contact-form" novalidate>
+ 
+              <div class="form-group" id="fg-name">
+                <label>Full name *</label>
+                <input type="text" id="input-name" name="name" placeholder="John Doe" autocomplete="name">
+                <span class="field-error">Please enter your name</span>
+              </div>
+ 
+              <div class="form-group" id="fg-email">
+                <label>Email Address *</label>
+                <input type="email" id="input-email" name="email" placeholder="you@company.com" autocomplete="email">
+                <span class="field-error">Please enter a valid email</span>
+              </div>
+ 
+              <div class="form-group">
+                <label>Budget range</label>
+                <select id="input-budget" name="budget">
+                  <option value="">Select budget...</option>
+                  <option>Under $2K</option>
+                  <option>$2K – $5K</option>
+                  <option>$5K – $10K</option>
+                  <option>$10K+</option>
+                </select>
+              </div>
+ 
+              <div class="form-group">
+                <label>Services needed</label>
+                <div class="checkbox-group">
+                  <label><input type="checkbox" name="services" value="AI Knowledge Assistant"> AI Knowledge Assistant</label>
+                  <label><input type="checkbox" name="services" value="CS Automation"> CS Automation</label>
+                  <label><input type="checkbox" name="services" value="Workflow Automation"> Workflow Automation</label>
+                  <label><input type="checkbox" name="services" value="Custom AI Systems"> Custom AI Systems</label>
+                  <label><input type="checkbox" name="services" value="Startup MVP Sprint"> Startup MVP Sprint</label>
+                  <label><input type="checkbox" name="services" value="AI Consulting"> AI Consulting</label>
+                </div>
+              </div>
+ 
+              <div class="form-group">
+                <label>Tell us about your challenge</label>
+                <textarea id="input-desc" name="description" placeholder="Describe your problem or goal..." rows="4"></textarea>
+              </div>
+ 
+              <button type="submit" class="btn btn-primary form-submit" id="submit-btn">
+                <span class="btn-text">Submit Request</span>
+                <span class="btn-spinner" style="display:none;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="spin-svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+                  Sending...
+                </span>
+              </button>
+ 
+              <div class="form-success" style="display:none;">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <strong>Request received!</strong>
+                <p>Check your inbox — we sent a confirmation. We'll reply personally within 24 hours.</p>
+              </div>
+ 
+            </form>
+          </div>
+      
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="img/Pruxel_Tech_Logo.png" alt="Pruxel Logo">
+                    <span>PRUXEL<span class="dot">.</span></span>
+                </div>
+
+                <p class="footer-desc">
+                    AI systems engineered for modern businesses. 
+                    We build scalable, intelligent solutions that drive measurable impact.
+                </p>
+            </div>
+
+            <!-- NAV -->
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="#solutions">Solutions</a>
+                <a href="#process">Process</a>
+                <a href="#why">Why Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="mailto:official@pruxel.com">official@pruxel.com</a>
+                <a href="tel:+84375069224">+84 375 069 224</a>
+
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Pruxel. All rights reserved.</span>
+        </div>
+
+        <!-- BACKGROUND EFFECT -->
+        <div class="footer-glow"></div>
     </footer>
 
-    <!-- External JavaScript -->
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
