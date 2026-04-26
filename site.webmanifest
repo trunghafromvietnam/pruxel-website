@@ -1,34 +1,38 @@
 {
-  "name": "Pruxel Technology",
+  "name": "Pruxel — AI Systems Engineering",
   "short_name": "Pruxel",
-  "description": "Các sản phẩm AI mang tính sáng tạo và hướng con người từ Công ty TNHH Công Nghệ Pruxel.",
-  "lang": "vi",
-  "start_url": "/vi/",
+  "description": "Production-grade AI systems. CS automation, RAG assistants, workflow automation. Fixed price, 6-week delivery.",
+  "lang": "en",
+  "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#001f3f",
+  "orientation": "portrait-primary",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "categories": ["business", "productivity", "technology"],
   "icons": [
     {
-      "src": "/img/icon-192x192.png",
+      "src": "/img/Pruxel_Tech_Logo.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/img/icon-512x512.png",
+      "src": "/img/Pruxel_Tech_Logo.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/img/icon-maskable-512x512.png",
+      "src": "/img/Pruxel_Tech_Logo.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
-    },
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
     {
-      "src": "/img/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "name": "Get Free AI Audit",
+      "url": "/#contact",
+      "description": "Book a free 45-min AI audit call"
     }
   ]
 }

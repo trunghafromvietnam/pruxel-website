@@ -168,7 +168,7 @@ document.addEventListener('mousemove', (e) => {
     });
 });
 
-// 1. Hiệu ứng Typewriter & Checkmark cho Badge
+// Typewriter & Checkmark for Badge
 function typeBadge(el) {
     const text = el.getAttribute('data-text');
     let i = 0;
@@ -356,7 +356,7 @@ function animateCounters(container) {
 lucide.createIcons();
 
 // ===================================================
-// CONTACT FORM — kết nối /api/contact
+// CONTACT FORM — connect /api/contact
 // ===================================================
 (function () {
     const form = document.getElementById('contact-form');
