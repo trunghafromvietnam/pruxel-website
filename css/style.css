@@ -1,61 +1,3 @@
-/* ===================================================
-   PRUXEL.TECH — Production CSS
-   Enterprise-grade design system
-=================================================== */
-
-/* Smooth scrolling for anchor links */
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* offset for fixed header */
-}
-
-/* Better focus visibility for accessibility (WCAG AA) */
-*:focus-visible {
-    outline: 2px solid #3b82f6;
-    outline-offset: 2px;
-    border-radius: 4px;
-}
-
-/* Selection highlight */
-::selection {
-    background: rgba(59, 130, 246, 0.3);
-    color: #fff;
-}
-
-/* Better scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-::-webkit-scrollbar-track {
-    background: #020617;
-}
-::-webkit-scrollbar-thumb {
-    background: rgba(59, 130, 246, 0.3);
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(59, 130, 246, 0.5);
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-
-/* Performance: use will-change wisely */
-.benefit-belt-inner,
-.marquee-content,
-.clock-hand,
-.chart-bar,
-.travel-dot {
-    will-change: transform;
-}
-
 :root {
     --bg: #020617;
     --primary: #3b82f6;
@@ -132,7 +74,7 @@ nav {
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     transition: 0.3s;
 }
 
@@ -293,16 +235,27 @@ h1 {
     flex-direction: row;
 }
 
-/* --- LOGO IMG --- */
+/* --- LOGO AND COMPANY NAME */
+.logo {
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
 .logo-img {
-    height: 32px;
+    height: 32px; 
     width: auto;
     filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.4));
     transition: transform 0.3s var(--easing);
 }
 
 .logo:hover .logo-img {
-    transform: rotate(-5deg) scale(1.1);
+    transform: rotate(-5deg) scale(1.1); 
 }
 
 /* HAMBURGER */
@@ -1386,36 +1339,18 @@ h1 {
 }
 
 /* GRID */
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 3rem;
-}
+
 
 /* BRAND */
 .footer-brand {
     max-width: 400px;
 }
 
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
 
-.footer-logo img {
-    height: 32px;
-    filter: drop-shadow(0 0 10px rgba(59,130,246,0.4));
-}
 
-.footer-logo .dot {
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+
+
+
 
 .footer-desc {
     color: var(--text-muted);
@@ -1485,10 +1420,7 @@ h1 {
 }
 
 /* BOTTOM */
-.footer-bottom {
-    justify-content: center;
-    text-align: center;
-}
+
 
 .footer-glow {
     position: absolute;
@@ -1646,213 +1578,193 @@ h1 {
     from { opacity: 0; transform: translateY(10px); }
     to   { opacity: 1; transform: translateY(0); }
 }
- 
-/* --- FOOTER --- */
-.footer {
-    position: relative;
-    padding: 5rem 0 2rem;
-    border-top: 1px solid var(--border);
-    background: linear-gradient(
-        to bottom,
-        rgba(2,6,23,0.6),
-        #020617
-    );
-    overflow: hidden;
+
+
+/* ===================================================
+   PROJECT TAGS & GITHUB LINK
+=================================================== */
+.proj-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 4px 0 12px;
 }
- 
-/* GRID */
+
+.proj-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    color: #93c5fd;
+    letter-spacing: 0.3px;
+}
+
+.proj-github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.25s var(--easing);
+    width: fit-content;
+}
+
+.proj-github-link:hover {
+    color: var(--text-main);
+    border-color: rgba(59, 130, 246, 0.5);
+    background: rgba(59, 130, 246, 0.08);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.proj-github-link svg {
+    fill: currentColor;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+}
+
+/* ===================================================
+   FOOTER ENHANCEMENTS — enterprise polish
+=================================================== */
 .footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1.2fr;
     gap: 3rem;
 }
- 
-/* BRAND */
-.footer-brand {
-    max-width: 400px;
-}
- 
+
 .footer-logo {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     font-weight: 700;
     font-size: 1.3rem;
+    color: #fff;
+    text-decoration: none;
     margin-bottom: 1rem;
+    transition: 0.3s var(--easing);
 }
- 
+
 .footer-logo img {
     height: 32px;
-    filter: drop-shadow(0 0 10px rgba(59,130,246,0.4));
+    width: auto;
+    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.4));
+    transition: transform 0.3s var(--easing);
 }
- 
+
+.footer-logo:hover img {
+    transform: rotate(-5deg) scale(1.1);
+}
+
 .footer-logo .dot {
     background: linear-gradient(90deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
- 
-.footer-desc {
+
+.footer-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1.2rem;
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 0.78rem;
     color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.6;
 }
- 
-/* COLUMN */
-.footer-col {
+
+.footer-location i {
+    width: 13px;
+    height: 13px;
+    color: var(--primary);
+}
+
+.footer-cta-link {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent) !important;
+    font-weight: 600;
+    margin-top: 4px !important;
+}
+
+.footer-cta-link i {
+    width: 14px;
+    height: 14px;
+}
+
+.footer-cta-link:hover {
+    color: #fff !important;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+.footer-bottom {
     display: flex;
-    flex-direction: column;   
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: left;
 }
-.footer-col h4 {
-    margin-bottom: 12px;
-    font-size: 0.95rem;
-}
- 
-.footer-col a {
-    display: block;
+
+.footer-bottom span,
+.footer-bottom a {
+    font-size: 0.82rem;
     color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-bottom: 8px;
-    transition: 0.2s;
-    text-decoration: none;
 }
- 
-.footer-col a:hover {
-    color: white;
-}
- 
-/* SOCIAL */
-.social-icons {
-    display: flex;
-    gap: 14px;
-    margin-top: 12px;
-}
- 
-.social-icons a {
-    width: 38px;
-    height: 38px;
+
+.footer-bottom-right {
     display: flex;
     align-items: center;
-    justify-content: center;
- 
-    border: 1px solid var(--border);
-    border-radius: 50%;
-    background: rgba(255,255,255,0.02);
- 
-    transition: all 0.3s ease;
+    gap: 12px;
 }
- 
-.social-icons i {
-    font-size: 16px;
-    color: var(--text-muted);
-    transition: 0.3s;
+
+.footer-bottom-right a {
+    text-decoration: none;
+    transition: 0.2s;
 }
- 
-.social-icons a:hover {
-    border-color: var(--primary);
-    box-shadow: 0 0 10px rgba(59,130,246,0.3);
-    transform: translateY(-2px);
+
+.footer-bottom-right a:hover {
+    color: var(--text-main);
 }
- 
-.social-icons a:hover i {
-    color: white;
+
+.footer-bottom-right .sep {
+    opacity: 0.4;
 }
- 
-/* BOTTOM */
-.footer-bottom {
-    justify-content: center;
-    text-align: center;
-}
- 
-.footer-glow {
-    position: absolute;
-    bottom: -100px;
-    left: 50%;
-    transform: translateX(-50%);
- 
-    width: 600px;
-    height: 300px;
- 
-    background: radial-gradient(
-        circle,
-        rgba(59,130,246,0.2),
-        transparent 70%
-    );
- 
-    filter: blur(80px);
-    animation: footerPulse 6s ease-in-out infinite;
-}
- 
-.footer-glow {
-    pointer-events: none;
-}
- 
-.footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 2px;
-    pointer-events: none;
-    background: linear-gradient(
-        to right,
-        transparent,
-        rgba(59,130,246,0.5),
-        transparent
-    );
- 
-    filter: blur(4px);
-}
- 
-@keyframes footerPulse {
-    0% { opacity: 0.4; }
-    50% { opacity: 0.8; }
-    100% { opacity: 0.4; }
-}
- 
-@media(max-width:900px){
+
+@media (max-width: 900px) {
     .footer-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr !important;
+    }
+    .footer-brand {
+        grid-column: 1 / -1;
     }
 }
- 
-@media(max-width:600px){
+
+@media (max-width: 600px) {
     .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
+        grid-template-columns: 1fr !important;
     }
- 
-    .footer-logo {
-        justify-content: center;
-    }
- 
-    .social-icons {
-        justify-content: center;
-    }
- 
     .footer-bottom {
         flex-direction: column;
-        gap: 10px;
         text-align: center;
-    }
- 
-    .footer-col {
         align-items: center;
     }
-}
- 
-@media (max-width: 768px) {
-    .nav-links, .btn-header { display: none; }
-    .hero-btns { flex-direction: row; }
-    .metrics-bar { flex-direction: column; gap: 3rem; padding: 2rem; text-align: center; }
-    .process-steps { flex-direction: column; }
-    #contact{
-        grid-template-columns:1fr;
-        padding: 2rem;
-    }
-    #process{
-        grid-template-columns:1fr;
-        padding: 2rem;
+    .footer-bottom-right {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
